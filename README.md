@@ -1,10 +1,10 @@
-|0. nomadcoder_webtoon_challenge [🔻](https://github.com/hardy716/nomadcoders_pomodoro_challenge#-nomadcoder_pomodoro_challenge)|
+|0. nomadcoder_webtoon_challenge [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-nomadcoder_webtoon_challenge)|
 |---|
 
-|1. 앱 기능 소개 [🔻](https://github.com/hardy716/nomadcoders_pomodoro_challenge#-코드-챌린지)|
+|1. 앱 기능 소개 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#%EF%B8%8F-앱-기능-소개)|
 |---|
 
-|2. 커스텀 [🔻](https://github.com/hardy716/nomadcoders_pomodoro_challenge#-코드-챌린지)|
+|2. 커스텀 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-커스텀)|
 |---|
 
 <br></br>
