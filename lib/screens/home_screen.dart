@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text(
           "HardyToons📚",
           style: TextStyle(
-            fontSize: 24.0,
+            fontSize: 20.0,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -78,9 +78,10 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "${getWeekday()}요웹툰",
+                        "${getWeekday()}요웹툰 📖",
                         style: const TextStyle(
-                          fontSize: 24.0,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),
                       ),
@@ -107,31 +108,51 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(width: 40.0),
                   ),
                 ),
-                Expanded(
+                const Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 5.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "실시간 인기 랭킹 ⭐️",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 300.0,
                   child: ListView.separated(
                     padding: const EdgeInsets.symmetric(
                       vertical: 10.0,
                       horizontal: 20.0,
                     ),
-                    itemCount: snapshot.data!.length,
+                    itemCount: 5,
                     itemBuilder: (context, index) {
                       var webtoon = snapshot.data![index];
                       return Container(
                         margin: const EdgeInsets.only(bottom: 10.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12.0),
-                          color: Colors.white.withOpacity(0.2),
+                          color: Colors.white.withOpacity(0.1),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                            vertical: 10.0,
+                            vertical: 8.0,
                             horizontal: 20.0,
                           ),
                           child: Row(
                             children: [
                               Text(
-                                "$index.  ${webtoon.title}",
-                                style: TextStyle(
+                                "${index + 1}.  ${webtoon.title}",
+                                style: const TextStyle(
                                   fontSize: 16.0,
                                   color: Colors.white,
                                 ),
