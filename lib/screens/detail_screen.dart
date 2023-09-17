@@ -65,11 +65,12 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 2.0,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.green,
+        shadowColor: Colors.white,
+        backgroundColor: Colors.black.withOpacity(0.8),
+        foregroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: onHeartTap,
@@ -81,14 +82,14 @@ class _DetailScreenState extends State<DetailScreen> {
         title: Text(
           widget.title,
           style: const TextStyle(
-            fontSize: 24.0,
+            fontSize: 20.0,
             fontWeight: FontWeight.w400,
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(50.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               Row(
@@ -97,15 +98,15 @@ class _DetailScreenState extends State<DetailScreen> {
                   Hero(
                     tag: widget.id,
                     child: Container(
-                      width: 240.0,
+                      width: 280.0,
                       clipBehavior: Clip.hardEdge,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
                         boxShadow: [
                           BoxShadow(
-                            blurRadius: 15.0,
+                            blurRadius: 20.0,
                             offset: const Offset(10.0, 10.0),
-                            color: Colors.black.withOpacity(0.5),
+                            color: Colors.white.withOpacity(0.2),
                           )
                         ],
                       ),
@@ -121,7 +122,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ],
               ),
               const SizedBox(
-                height: 20.0,
+                height: 30.0,
               ),
               FutureBuilder(
                 future: webtoon,
@@ -131,18 +132,21 @@ class _DetailScreenState extends State<DetailScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data!.about,
-                          style: const TextStyle(
+                          '${snapshot.data!.genre} / ${snapshot.data!.age}',
+                          style: TextStyle(
                             fontSize: 16.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white.withOpacity(0.8),
                           ),
                         ),
                         const SizedBox(
                           height: 15.0,
                         ),
                         Text(
-                          '${snapshot.data!.genre} / ${snapshot.data!.age}',
-                          style: const TextStyle(
+                          snapshot.data!.about,
+                          style: TextStyle(
                             fontSize: 16.0,
+                            color: Colors.white.withOpacity(0.7),
                           ),
                         ),
                       ],
@@ -152,7 +156,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 },
               ),
               const SizedBox(
-                height: 25.0,
+                height: 30.0,
               ),
               FutureBuilder(
                 future: episodes,

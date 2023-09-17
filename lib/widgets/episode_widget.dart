@@ -25,9 +25,8 @@ class Episode extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(bottom: 10.0),
         decoration: BoxDecoration(
-          border: Border.all(width: 0.5, color: Colors.green.shade400),
-          borderRadius: BorderRadius.circular(20.0),
-          color: Colors.white,
+          borderRadius: BorderRadius.circular(12.0),
+          color: Colors.white.withOpacity(0.9),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(

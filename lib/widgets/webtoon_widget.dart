@@ -32,15 +32,15 @@ class Webtoon extends StatelessWidget {
           Hero(
             tag: id,
             child: Container(
-              width: 240.0,
+              width: 200.0,
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(10.0),
                 boxShadow: [
                   BoxShadow(
-                    blurRadius: 15.0,
+                    blurRadius: 30.0,
                     offset: const Offset(10.0, 10.0),
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.white.withOpacity(0.2),
                   )
                 ],
               ),
@@ -54,12 +54,14 @@ class Webtoon extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20.0,
+            height: 18.0,
           ),
           Text(
             title,
             style: const TextStyle(
               fontSize: 18.0,
+              color: Colors.white,
+              fontWeight: FontWeight.w800,
             ),
           ),
         ],

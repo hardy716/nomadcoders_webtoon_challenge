@@ -8,19 +8,36 @@ class HomeScreen extends StatelessWidget {
 
   final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
 
+  String getWeekday() {
+    List<String> weekdayList = [
+      "월",
+      "화",
+      "수",
+      "목",
+      "금",
+      "토",
+      "일",
+    ];
+    DateTime now = DateTime.now();
+    int weekday = now.weekday;
+
+    return weekdayList[weekday - 1];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 2.0,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.green,
+        backgroundColor: Colors.black.withOpacity(0.8),
+        foregroundColor: Colors.white,
+        shadowColor: Colors.white,
         title: const Text(
-          "Today's Toons",
+          "HardyToons📚",
           style: TextStyle(
             fontSize: 24.0,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),
@@ -50,7 +67,25 @@ class HomeScreen extends StatelessWidget {
             return Column(
               children: [
                 const SizedBox(
-                  height: 50.0,
+                  height: 30.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 5.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "${getWeekday()}요웹툰",
+                        style: const TextStyle(
+                          fontSize: 24.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Expanded(
                   child: ListView.separated(
@@ -66,6 +101,44 @@ class HomeScreen extends StatelessWidget {
                         title: webtoon.title,
                         thumb: webtoon.thumb,
                         id: webtoon.id,
+                      );
+                    },
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(width: 40.0),
+                  ),
+                ),
+                Expanded(
+                  child: ListView.separated(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 20.0,
+                    ),
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      var webtoon = snapshot.data![index];
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 10.0),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.0),
+                          color: Colors.white.withOpacity(0.2),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 20.0,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                "$index.  ${webtoon.title}",
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       );
                     },
                     separatorBuilder: (context, index) =>
