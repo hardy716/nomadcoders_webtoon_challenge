@@ -7,6 +7,9 @@
 |2. 커스텀 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-커스텀)|
 |---|
 
+|3. 알게된 사실 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-커스텀)|
+|---|
+
 <br></br>
 
 ## 🙌🏻 nomadcoder_webtoon_challenge
@@ -36,5 +39,15 @@ Flutter로 웹툰 앱 만들기 - #6 WEBTOON APP 강의를 기반으로 진행�
 |:---:|:---:|
 | 변경 전 | 변경 후 |
 | ![nomadcoder_webtoon1](https://github.com/hardy716/nomadcoders_webtoon_challenge/assets/101140679/7974f2ea-b0b0-4d5a-9cdf-243b66dd8373) | ![nomadcoder_webtoon2](https://github.com/hardy716/nomadcoders_webtoon_challenge/assets/101140679/e1629840-a9fe-477f-bf09-a08d4ce8b78e) |
+
+<br></br>
+
+## 👨🏻‍💻 알게된 사실
+
+1. [Nomadcoders - Flutter로 웹툰 앱 만들기 #1](https://hardy716.github.io/blog/flutter/2023-09-17-flutter웹툰앱-1/)
+
+2. [Nomadcoders - Flutter로 웹툰 앱 만들기 #2](https://hardy716.github.io/blog/flutter/2023-09-17-flutter웹툰앱-2/)
+
+3. [Flutter `Image.network()` 403 에러](https://hardy716.github.io/blog/trouble-shooting/2023-09-18-troubleshooting-5/)
 
 <br></br>
