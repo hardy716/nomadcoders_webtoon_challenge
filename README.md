@@ -7,7 +7,7 @@
 |2. 커스텀 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-커스텀)|
 |---|
 
-|3. 알게된 사실 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge#-커스텀)|
+|3. 알게된 사실 [🔻](https://github.com/hardy716/nomadcoders_webtoon_challenge/blob/main/README.md#-알게된-사실)|
 |---|
 
 <br></br>
